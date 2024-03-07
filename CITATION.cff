@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Cibrario
+    given-names: Francesca
+  - family-names: Golan
+    given-names: Or Samimi
+  - family-names: Ranieri
+    given-names: Giacomo
+  - family-names: Dri
+    given-names: Emanuele
+  - family-names: Ippoliti
+    given-names: Mattia
+  - family-names: Cohen
+    given-names: Ron
+title: "Quantum rainbow option pricing code implementation"
+version: 1.0
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.10793558
+date-released: 2024-03-07
