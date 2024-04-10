@@ -31,6 +31,7 @@ jobs:
           pip install jupyter 
           pip install jupyterlab
           pip install --upgrade pip ipython ipykernel
+          ipython kernel install --name "py38_classiq_secondary" --user
 
 
       - name: Run Jupyter Notebook
