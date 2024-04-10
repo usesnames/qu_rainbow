@@ -3,7 +3,7 @@ name: Weekly Notebook Test
 on:
   schedule:
     - cron: "0 0 * * 0"  # Run every Sunday at midnight UTC
-  workflow_dispatch:
+  workflow_dispatch: # Run on Click too
 
 jobs:
   test:
@@ -28,13 +28,15 @@ jobs:
           pip install IPython 
           pip install pandas 
           pip install sympy
+
+      - name: Install Jupyter
           pip install jupyter 
           pip install jupyterlab
           pip install --upgrade pip ipython ipykernel
-          ipython kernel install --name "py38_classiq_secondary" --user
+          ipython kernel install --name "py38_classiq_secondary" --user # Because of some kernel bug
 
 
-      - name: Run Jupyter Notebook
+      - name: Run Jupyter Notebooks
         run: |
           jupyter nbconvert --to notebook --execute RainbowOptions-DirectMethod.ipynb
           jupyter nbconvert --to notebook --execute RainbowOptions-IntegrationMethod.ipynb
