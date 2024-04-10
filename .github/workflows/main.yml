@@ -27,7 +27,6 @@ jobs:
           pip install matplotlib 
           pip install IPython 
           pip install pandas 
-          pip install functools 
           pip install sympy
 
 
