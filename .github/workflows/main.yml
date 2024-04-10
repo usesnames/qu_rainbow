@@ -30,6 +30,7 @@ jobs:
           pip install sympy
           pip install jupyter 
           pip install jupyterlab
+          pip install --upgrade pip ipython ipykernel
 
 
       - name: Run Jupyter Notebook
