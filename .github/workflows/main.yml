@@ -20,7 +20,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install numpy classiq scipy matplotlib IPython itertools pandas functools math sympy 
+          pip install numpy classiq scipy matplotlib IPython pandas functools math sympy 
 
       - name: Run Jupyter Notebook
         run: |
