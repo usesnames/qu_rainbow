@@ -1,0 +1,30 @@
+name: Weekly Notebook Test
+
+on:
+  schedule:
+    - cron: "0 0 * * 0-6"  # Run every Sunday at midnight UTC
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+
+      - name: Install dependencies
+        run: |
+          pip install numpy classiq scipy matplotlib IPython itertools pandas functools math sympy 
+
+      - name: Run Jupyter Notebook
+        run: |
+          jupyter nbconvert --execute RainbowOptions-DirectMethod.ipynb
+          jupyter nbconvert --execute RainbowOptions-IntegrationMethod.ipynb
+
+      # Add more steps for testing as needed
