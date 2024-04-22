@@ -30,11 +30,12 @@ jobs:
           pip install sympy
 
       - name: Install Jupyter
+        run: |
           pip install jupyter 
           pip install jupyterlab
           pip install --upgrade pip ipython ipykernel
           ipython kernel install --name "py38_classiq_secondary" --user # Because of some kernel bug
-
+          ipython kernel install --name "py38_classiq" --user # Because of some kernel bug
 
       - name: Run Jupyter Notebooks
         run: |
