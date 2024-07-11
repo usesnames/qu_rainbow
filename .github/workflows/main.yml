@@ -37,6 +37,9 @@ jobs:
           ipython kernel install --name "py38_classiq_secondary" --user # Because of some kernel bug
           ipython kernel install --name "py38_classiq" --user # Because of some kernel bug
 
+      - name: Set authentication
+        run: echo "${{ secrets.CLASSIQ_CREDENTIALS_B64 }}" | base64 --decode > "${HOME}/.classiq-credentials"
+        
       - name: Run Jupyter Notebooks
         run: |
           jupyter nbconvert --to notebook --execute RainbowOptions-DirectMethod.ipynb
